@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Custom Styles */
+    .profile-card {
+      background-color: #f5f5f5;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .profile-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .name {
+      font-size: 1.5rem;
+      margin-left: 0.5rem;
+    }
+    .gmail-icon, .yahoo-icon {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+    }
+    .cv-section {
+      margin-top: 2rem;
+    }
+    .skills-card {
+      display: none;
+    }
+    .card-content {
+      max-height: none; /* Remove the maximum height */
+      overflow-y: auto; /* Add vertical scroll if content exceeds max height */
+    }
+  </style>
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-third">
+          <div class="profile-card">
+            <div class="has-text-centered">
+              <img src="Profilepage.jpg" alt="Profile Picture" class="profile-img">
+            </div>
+            <div class="profile-info">
+              <a href="https://www.facebook.com/jethrorate/" target="_blank" class="has-text-primary">
+                <i class="fab fa-facebook facebook-icon"></i> <!-- Larger Facebook Icon -->
+              </a>
+              <h1 class="name">Jethro Joshua Orate</h1>
+            </div>
+            <p class="subtitle is-6 has-text-centered">BS-IT, 4th Year</p>
+            <p class="has-text-centered">Ateneo de Davao University</p>
+            <p class="has-text-centered">Clarin Extension BO, Obrero Davao City</p>
+            <p class="has-text-centered">Affiliation: The Bookkeepers Academy</p>
+            <p class="has-text-centered">jjcascaro@gmail.com | jjcascaro@yahoo.com</p>
+            <div class="profile-info">
+              <a href="mailto:jjcascaro@gmail.com" class="has-text-danger">
+                <i class="far fa-envelope gmail-icon"></i> <!-- Gmail Icon -->
+              </a>
+              <p class="name">jjcascaro@gmail.com</p>
+            </div>
+            <div class="profile-info">
+              <a href="mailto:jjcascaro@yahoo.com" class="has-text-primary">
+                <i class="far fa-envelope yahoo-icon"></i> <!-- Yahoo Icon -->
+              </a>
+              <p class="name">jjcascaro@yahoo.com</p>
+            </div>
+            <button id="toggleSkills" class="button is-primary is-fullwidth">Show Skills</button>
+            <div id="skills" class="skills-card card">
+              <div class="card-content">
+                <h2 class="subtitle">Skills</h2>
+                <ul>
+                  <li>Website Programmer (HTML, CSS, JavaScript)</li>
+                  <li>Mobile Application Programmer (Java, Python, C++, C#)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <h2 class="subtitle">Personal Information</h2>
+              <ul>
+                <li><strong>Name:</strong> Jethro Joshua C. Orate</li>
+                <li><strong>Date of Birth:</strong> November 18, 1999</li>
+                <li><strong>Address:</strong> Clarin Extension BO, Obrero Davao City</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h2 class="subtitle">Objective</h2>
+              <p>To secure a position that allows me to achieve financial stability and independence, enabling me to support my parents and contribute to their well-being. Simultaneously, I aim to gain valuable experience and professional growth in my chosen field, enhancing my skills and expertise to excel in my career. By combining financial stability and personal growth, I strive to build a fulfilling and successful future for myself and my family.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h2 class="subtitle">Education</h2>
+              <ul>
+                <li><strong>Current College:</strong> Ateneo de Davao University</li>
+                <li><strong>Course:</strong> BS-IT</li>
+                <li><strong>Year Level:</strong> 4th Year</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <h2 class="subtitle">Additional Information</h2>
+              <p>Web Development: Proficient in HTML, CSS, and JavaScript. Experience in building responsive and interactive websites.</p>
+              <p>Mobile Development: Skilled in Java, Python, C++, and C#. Developed various mobile applications for Android and iOS platforms.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // JavaScript to toggle visibility of the skills card
+    document.getElementById('toggleSkills').addEventListener('click', function() {
+      var skillsCard = document.getElementById('skills');
+      if (skillsCard.style.display === 'none') {
+        skillsCard.style.display = 'block';
+        this.textContent = 'Hide Skills';
+      } else {
+        skillsCard.style.display = 'none';
+        this.textContent = 'Show Skills';
+      }
+    });
+  </script>
+</body>
+</html>
